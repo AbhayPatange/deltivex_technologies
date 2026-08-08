@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #060607;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 0.98;
+  }
+
+  ::selection {
+    background: #ef3d6e;
+    color: #f4f4f2;
+  }
+
+  :focus-visible {
+    outline: 2px solid #ef3d6e;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply px-6 md:px-10 lg:px-16;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] tracking-[0.2em] uppercase text-ink-faint;
+  }
+
+  .eyebrow-pink {
+    @apply font-mono text-[11px] tracking-[0.2em] uppercase text-[#ff85a8];
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-none;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .num-index {
+    @apply font-display text-3xl md:text-4xl text-[#ef3d6e];
+  }
+
+  .circle-btn {
+    @apply relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#ef3d6e]/60 text-[#ef3d6e] transition-all duration-200;
+  }
+
+  .circle-btn-filled {
+    @apply relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#ef3d6e] text-[#060607] transition-all duration-200;
+  }
+
+  .pill-outline {
+    @apply inline-flex items-center gap-3 rounded-full border border-[#ef3d6e]/70 py-1.5 pl-5 pr-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-ink transition-colors duration-200 hover:border-[#ef3d6e];
+  }
+
+  .corner-tick {
+    @apply pointer-events-none absolute h-3 w-3 border-[#ef3d6e]/50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
