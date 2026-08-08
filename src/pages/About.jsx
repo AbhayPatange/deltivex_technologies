@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import Container from "../components/common/Container";
 import SectionHeading from "../components/common/SectionHeading";
@@ -8,45 +9,81 @@ import { founders } from "../data/founders";
 const pillars = [
   {
     title: "Why we started",
-    text: "We kept seeing the same gap: businesses needing real software or AI capability, and options that were either too generic (templates, no-code tools) or too expensive (large agencies with heavy overhead). Deltivex exists to sit in between — a small team that can move fast and still build things properly.",
+    text: "We saw businesses struggling to find the right balance between quality, speed, and cost. Deltivex was created to offer a focused technical team that understands the problem, builds the right solution, and moves quickly.",
   },
   {
     title: "Mission",
-    text: "Build practical software and AI systems that solve specific business problems — without the padding, the buzzwords, or the bloated process that usually comes with hiring a larger firm.",
+    text: "Build practical software, AI systems, and digital solutions that create measurable value for businesses — with thoughtful engineering and a clear focus on outcomes.",
   },
   {
     title: "Vision",
-    text: "To grow into a technology partner that businesses trust with their core systems — not because of scale, but because of consistently good engineering and honest communication.",
+    text: "To become a technology partner businesses trust with their most important digital initiatives — through strong engineering, honest communication, and consistently reliable work.",
   },
   {
     title: "Engineering philosophy",
-    text: "Simple systems are easier to trust than clever ones. We favor clear architecture, readable code, and decisions we can explain — over frameworks and patterns chosen for their own sake.",
+    text: "Good engineering should make things simpler, not more complicated. We value clear architecture, readable code, thoughtful decisions, and technology that serves a purpose.",
+  },
+];
+
+const values = [
+  {
+    number: "01",
+    title: "Clarity",
+    text: "We understand the problem before we start building. Clear requirements lead to better decisions and better products.",
+  },
+  {
+    number: "02",
+    title: "Quality",
+    text: "We care about the details that make software reliable, maintainable, and ready for real-world use.",
+  },
+  {
+    number: "03",
+    title: "Transparency",
+    text: "Clients should always know what is happening, why decisions are being made, and where the project stands.",
+  },
+  {
+    number: "04",
+    title: "Ownership",
+    text: "We take responsibility for our work from the first conversation through development, delivery, and refinement.",
+  },
+  {
+    number: "05",
+    title: "Practicality",
+    text: "We choose technology because it solves a problem — not because it is new, popular, or unnecessarily complex.",
+  },
+  {
+    number: "06",
+    title: "Long-term thinking",
+    text: "We build solutions that can evolve with the business instead of creating technical decisions that become limitations later.",
   },
 ];
 
 export default function About() {
   return (
     <>
-      <section className="pt-36 pb-20 md:pt-44 md:pb-28 border-b border-border relative overflow-hidden">
-        <div className="absolute inset-0 grid-bg [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black,transparent)]" />
-        <Container className="relative">
+      {/* Hero */}
+      <section className="section-pad">
+        <Container>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="eyebrow-pink mb-5 inline-flex items-center gap-2"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-pink" />
             About Deltivex
           </motion.p>
+
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="text-[36px] sm:text-[48px] md:text-[56px] leading-[0.98] max-w-3xl text-balance"
+            className="text-[42px] sm:text-[56px] md:text-[64px] leading-[0.98] max-w-3xl text-balance"
           >
-            A small technical team, built to do the <span className="text-pink">work properly.</span>
+            Technology built around
+            <br />
+            real business problems.
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,16 +91,18 @@ export default function About() {
             className="mt-6 max-w-xl text-[15px] leading-relaxed text-ink-soft text-balance"
           >
             Deltivex Technologies was founded by Abhay, Gourav, Rohan, and
-            Yash to build software, AI systems, and automation for businesses
-            that need real engineering behind their product — not just a
-            polished pitch.
+            Yash with a simple belief: great technology starts with
+            understanding the problem. We build software, AI systems, and
+            automation that help businesses turn ideas into reliable digital
+            products.
           </motion.p>
         </Container>
       </section>
 
-      <section className="section-pad border-b border-border">
+      {/* About pillars */}
+      <section className="border-b border-border">
         <Container>
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-14">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-14 py-16 md:py-20">
             {pillars.map((pillar, i) => (
               <motion.div
                 key={pillar.title}
@@ -73,21 +112,64 @@ export default function About() {
                 transition={{ duration: 0.5, delay: i * 0.06 }}
                 className="border-t border-border-strong pt-6"
               >
-                <h2 className="font-display text-[19px] uppercase">{pillar.title}</h2>
-                <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">{pillar.text}</p>
+                <h2 className="font-display text-[19px] uppercase tracking-tight">
+                  {pillar.title}
+                </h2>
+
+                <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-ink-soft">
+                  {pillar.text}
+                </p>
               </motion.div>
             ))}
           </div>
         </Container>
       </section>
 
+      {/* Values */}
+      <section className="section-pad border-b border-border">
+        <Container>
+          <SectionHeading
+            eyebrow="What we stand for"
+            title="Principles behind the work."
+            description="The way we work is as important as what we build. These principles guide how we approach projects, make technical decisions, and work with our clients."
+          />
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+            {values.map((value, i) => (
+              <motion.div
+                key={value.number}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="border-t border-border-strong pt-5"
+              >
+                <span className="text-[13px] text-ink-soft">
+                  {value.number}
+                </span>
+
+                <h3 className="mt-5 font-display text-[18px] uppercase tracking-tight">
+                  {value.title}
+                </h3>
+
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-soft">
+                  {value.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Team */}
       <section className="section-pad border-b border-border">
         <Container>
           <SectionHeading
             eyebrow="Founding team"
             title="The people behind Deltivex."
-            description="Four founders working directly on the product — no separation between strategy and execution."
+            description="Four founders working closely across strategy, engineering, and product to turn ideas into reliable digital solutions."
           />
+
           <div className="mt-12">
             <FounderGrid founders={founders} />
           </div>
