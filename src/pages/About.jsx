@@ -79,9 +79,9 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="text-[42px] sm:text-[56px] md:text-[64px] leading-[0.98] max-w-3xl text-balance"
           >
-            Technology built around
+            <span className="text-pink">Technology</span> built around
             <br />
-            real business problems.
+            real business <span className="text-pink">Problems.</span>
           </motion.h1>
 
           <motion.p
