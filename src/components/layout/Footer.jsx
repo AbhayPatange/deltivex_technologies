@@ -9,8 +9,8 @@ export default function Footer() {
       <Container className="py-14">
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr] gap-10">
           <div>
-            <span className="font-display text-[26px] tracking-[0.01em] text-pink uppercase">
-              Deltivex
+            <span className="font-display text-[26px] tracking-[0.01em] text-white uppercase">
+              Deltive<span className="text-[#327ee2]">x</span>
             </span>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
               A product engineering studio. We design, build, and scale
