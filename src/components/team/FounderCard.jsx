@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
-import { GithubIcon, LinkedinIcon } from "../common/SocialIcons";
-import { initials } from "../../lib/utils";
+import { LinkedinIcon } from "../common/SocialIcons";
 
-export function FounderAvatar({ name, className = "" }) {
+export function FounderAvatar({ name, photo, className = "" }) {
   return (
-    <div
-      className={`flex items-center justify-center bg-surface ${className}`}
-    >
-      <span className="font-display text-3xl text-pink">
-        {initials(name)}
-      </span>
+    <div className={`overflow-hidden bg-surface ${className}`}>
+      <img
+        src={`/founders/${photo}.jpg`}
+        alt={`${name} - Deltivex founder`}
+        className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+      />
     </div>
   );
 }
@@ -23,34 +22,29 @@ export default function FounderCard({ founder, index = 0 }) {
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="border border-border overflow-hidden group hover:border-pink/40 transition-colors duration-300"
     >
-      <FounderAvatar name={founder.name} className="aspect-square w-full border-b border-border" />
-      <div className="p-5">
-        <h3 className="font-display text-[16px] uppercase">{founder.name}</h3>
-        <p className="mt-1 text-sm text-ink-soft">{founder.role}</p>
-        <div className="mt-4 flex items-center gap-3">
-          {founder.github && founder.github !== "#" ? (
-            <a
-              href={founder.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${founder.name} on GitHub`}
-              className="text-ink-faint hover:text-pink transition-colors"
-            >
-              <GithubIcon className="h-4 w-4" />
-            </a>
-          ) : null}
-          {founder.linkedin && founder.linkedin !== "#" ? (
-            <a
-              href={founder.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${founder.name} on LinkedIn`}
-              className="text-ink-faint hover:text-pink transition-colors"
-            >
-              <LinkedinIcon className="h-4 w-4" />
-            </a>
-          ) : null}
-        </div>
+      <FounderAvatar
+        name={founder.name}
+        photo={founder.photo}
+        className="aspect-[4/5]"
+      />
+
+      <div className="p-6">
+        <h3 className="font-display text-[18px] uppercase">
+          {founder.name}
+        </h3>
+
+        {founder.linkedin && founder.linkedin !== "#" ? (
+          <a
+            href={founder.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 inline-flex items-center gap-2 text-[14px] text-ink-soft hover:text-pink transition-colors"
+          >
+            <LinkedinIcon />
+            <span>LinkedIn</span>
+            <span>↗</span>
+          </a>
+        ) : null}
       </div>
     </motion.div>
   );

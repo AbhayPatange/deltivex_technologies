@@ -1,33 +1,29 @@
 import { Mail, MapPin } from "lucide-react";
-import { GithubIcon, LinkedinIcon, XIcon } from "../common/SocialIcons";
+import { LinkedinIcon, InstagramIcon } from "../common/SocialIcons";
 import { COMPANY } from "../../lib/constants";
 import { footerLinks } from "../../data/navigation";
 
 const socialIcons = {
-  GitHub: GithubIcon,
   LinkedIn: LinkedinIcon,
-  "X / Twitter": XIcon,
+  Instagram: InstagramIcon,
 };
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-8">
-      <div>
-        <p className="eyebrow-pink mb-3 inline-flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-pink" />
-          Get in touch
-        </p>
-        <h2 className="font-display text-[30px] uppercase leading-tight">
-          Tell us about your project.
-        </h2>
-        <p className="mt-4 text-[15px] leading-relaxed text-ink-soft max-w-sm">
-          Whether it's a full product build, an AI feature, or a system that
-          needs modernizing — describe it and we'll follow up with next
-          steps.
-        </p>
-      </div>
+    <div>
+      <p className="eyebrow-pink mb-5">Get in touch</p>
 
-      <div className="space-y-4">
+      <h1 className="text-[42px] sm:text-[52px] md:text-[60px] leading-[0.98] max-w-xl text-balance">
+        Tell us about your project.
+      </h1>
+
+      <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-ink-soft">
+        Whether it's a full product build, an AI feature, or a system that
+        needs modernizing — describe it and we'll follow up with next
+        steps.
+      </p>
+
+      <div className="mt-10 space-y-4">
         <a
           href={`mailto:${COMPANY.email}`}
           className="flex items-center gap-3 text-sm text-ink-soft hover:text-ink transition-colors"
@@ -37,6 +33,7 @@ export default function ContactInfo() {
           </span>
           {COMPANY.email}
         </a>
+
         <div className="flex items-center gap-3 text-sm text-ink-soft">
           <span className="h-9 w-9 rounded-full border border-pink/50 flex items-center justify-center shrink-0">
             <MapPin className="h-4 w-4 text-pink" />
@@ -45,9 +42,12 @@ export default function ContactInfo() {
         </div>
       </div>
 
-      <div className="flex items-center gap-3 pt-2">
+      <div className="flex items-center gap-3 pt-6">
         {footerLinks.social.map((link) => {
-          const Icon = socialIcons[link.label] ?? GithubIcon;
+          const Icon = socialIcons[link.label];
+
+          if (!Icon) return null;
+
           return (
             <a
               key={link.label}
