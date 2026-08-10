@@ -6,7 +6,7 @@ export default function NotFound() {
     <section className="min-h-[80vh] flex items-center pt-24">
       <Container className="text-center">
         <p className="font-mono text-pink text-sm">404</p>
-        <h1 className="mt-4 text-[32px] md:text-[42px]">
+        <h1 className="mt-4 text-[32px] md:text-[42px] font-medium tracking-wider">
           This page doesn&rsquo;t exist.
         </h1>
         <p className="mt-4 text-ink-soft max-w-md mx-auto">

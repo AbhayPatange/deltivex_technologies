@@ -13,7 +13,7 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
           className="grid lg:grid-cols-[1.3fr_1fr_0.7fr] gap-10 lg:gap-8 items-end"
         >
-          <h2 className="text-[36px] sm:text-[46px] md:text-[54px] leading-[0.98] text-balance">
+          <h2 className="text-[36px] sm:text-[46px] md:text-[54px] font-medium leading-[1] tracking-wider text-balance">
             <span className="text-pink">Ideas are easy.</span>
             <br />
             <span className="text-ink">Execution is</span>

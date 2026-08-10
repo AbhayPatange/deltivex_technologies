@@ -122,9 +122,6 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       {/* Background video + scrim */}
       <HeroVideo />
-
-      {/* Faint engineering dot-grid, full bleed */}
-
       {/* Signal wash, top right */}
       <div className="pointer-events-none absolute -right-40 -top-40 z-[1] h-[520px] w-[520px] rounded-full bg-[#FF2E63]/[0.06] blur-3xl" />
 
@@ -149,7 +146,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-4xl text-[54px] font-semibold leading-[0.92] tracking-[-0.045em] text-ink sm:text-[72px] lg:text-[88px]"
+            className="max-w-4xl text-[54px] font-medium leading-[1] tracking-wider text-ink sm:text-[72px] lg:text-[88px]"
           >
             <span className="block text-stone-300">We Build</span>
 

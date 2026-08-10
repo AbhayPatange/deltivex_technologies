@@ -76,7 +76,7 @@ export default function About() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="text-[42px] sm:text-[56px] md:text-[64px] leading-[0.98] max-w-2xl text-balance"
+            className="text-[42px] sm:text-[56px] md:text-[64px] font-medium leading-[1] tracking-wider max-w-2xl text-balance"
           >
             <span className="text-pink">Technology</span> built around
             <br />
@@ -111,7 +111,7 @@ export default function About() {
                 transition={{ duration: 0.5, delay: i * 0.06 }}
                 className="border-t border-border-strong pt-6"
               >
-                <h2 className="font-display text-[19px] uppercase tracking-wide">
+                <h2 className="font-display text-[19px] uppercase tracking-wider">
                   {pillar.title}
                 </h2>
 
@@ -147,7 +147,7 @@ export default function About() {
                   {value.number}
                 </span>
 
-                <h3 className="mt-5 font-display text-[18px] uppercase tracking-wide">
+                <h3 className="mt-5 font-display text-[18px] uppercase tracking-wider">
                   {value.title}
                 </h3>
 

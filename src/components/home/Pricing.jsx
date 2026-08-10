@@ -104,7 +104,7 @@ function LaunchOffer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6 }}
-      className="relative mx-auto mb-16 max-w-3xl overflow-hidden border border-[#ef3d6e]/40 bg-gradient-to-b from-[#ef3d6e]/[0.08] to-transparent p-8 sm:p-10"
+      className="relative mx-auto tracking-wider font-medium mb-16 max-w-3xl overflow-hidden border border-[#ef3d6e]/40 bg-gradient-to-b from-[#ef3d6e]/[0.08] to-transparent p-8 sm:p-10"
     >
       <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[#ef3d6e]/20 blur-3xl" />
       <CornerBrackets active />
@@ -118,7 +118,7 @@ function LaunchOffer() {
         </span>
       </div>
 
-      <h3 className="relative mt-5 max-w-lg font-display text-2xl leading-tight text-stone-100 sm:text-3xl">
+      <h3 className="relative mt-5 max-w-lg font-medium tracking-wider text-2xl leading-tight text-stone-100 sm:text-3xl">
         Build your website from just ₹5,000.
       </h3>
 
@@ -147,7 +147,7 @@ function LaunchOffer() {
         Only for our first 5 clients.
       </p>
 
-      <p className="relative mt-2 font-mono text-[11px] text-stone-600">
+      <p className="relative mt-2 font-mono text-[11px] tracking-wide text-stone-600">
         Then: ₹5K → Starter · ₹10K → Business · ₹15K → Pro
       </p>
 
@@ -186,7 +186,7 @@ export default function Pricing() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#ef3d6e]" />
             SYS.05 — Pricing
           </div>
-          <h2 className="text-3xl font-semibold leading-tight tracking-tight text-stone-100 sm:text-4xl">
+          <h2 className="text-3xl font-medium leading-tight tracking-wider text-stone-100 sm:text-4xl">
             Three packages. No surprises.
           </h2>
           <p className="mt-5 text-[14px] leading-6 text-stone-400">

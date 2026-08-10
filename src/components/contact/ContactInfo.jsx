@@ -13,7 +13,7 @@ export default function ContactInfo() {
     <div>
       <p className="eyebrow-pink mb-5">Get in touch</p>
 
-      <h1 className="text-[42px] sm:text-[52px] md:text-[60px] leading-[0.98] max-w-xl text-balance">
+      <h1 className="text-[42px] sm:text-[52px] md:text-[60px] font-medium leading-[1] tracking-wider max-w-xl text-balance">
         Tell us about your project.
       </h1>
 

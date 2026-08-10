@@ -23,7 +23,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="text-[42px] sm:text-[56px] md:text-[64px] leading-[0.98] max-w-2xl text-balance"
+            className="text-[42px] sm:text-[56px] md:text-[64px] font-medium leading-[1] tracking-wider max-w-2xl text-balance"
           >
             Six capabilities.<br /><span className="text-pink">One team.</span>
           </motion.h1>

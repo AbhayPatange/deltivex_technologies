@@ -15,6 +15,10 @@ export default function Home() {
       <TechStrip />
       <Pricing />
       <Solutions />
+      <SelectedWork />
+      <Process />
+      <WhyDeltivex />
+      <TeamPreview />
       <CTA />
     </>
   );

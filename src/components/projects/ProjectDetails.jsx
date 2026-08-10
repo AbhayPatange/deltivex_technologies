@@ -18,7 +18,7 @@ export default function ProjectDetails({ project }) {
           transition={{ duration: 0.6 }}
         >
           <Badge>{project.type}</Badge>
-          <h1 className="mt-5 text-[34px] md:text-[46px] leading-[1] text-balance">
+          <h1 className="mt-5 text-[34px] md:text-[46px] font-medium leading-[1] tracking-wider text-balance">
             {project.name}
           </h1>
           <p className="mt-4 text-[16px] leading-relaxed text-ink-soft text-balance">

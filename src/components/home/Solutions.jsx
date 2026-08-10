@@ -93,7 +93,7 @@ export default function Solutions() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#ef3d6e]" />
             SYS.04 — What we do
           </div>
-          <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-stone-100 sm:text-4xl">
+          <h2 className="max-w-2xl text-3xl font-medium leading-tight tracking-wider text-stone-100 sm:text-4xl">
             Software, AI, and infrastructure — one team.
           </h2>
           <p className="mt-5 max-w-xl text-[14px] leading-6 text-stone-400">
