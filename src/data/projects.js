@@ -20,7 +20,7 @@ export const projects = [
     ],
     technologies: ["Python", "React", "OpenAI API", "ReportLab"],
     github: "#",
-    demo: "#",
+    demo: "https://airesumeanalyzer-abhayproject.vercel.app/",
   },
   {
     slug: "job-platform",
@@ -40,26 +40,41 @@ export const projects = [
     ],
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     github: "#",
-    demo: "#",
+    demo: "https://jobportal-abhayproject.vercel.app/",
   },
   {
-    slug: "ai-patient-advisor",
-    name: "AI Patient Advisor",
-    type: "Personal Project",
-    tagline: "An assistant that helps patients understand symptoms and next steps.",
-    cover: "ai-advisor",
-    problem:
-      "People often turn to unstructured web searches when trying to understand symptoms, which can be confusing or misleading without any triage structure.",
-    solution:
-      "A conversational assistant that asks structured follow-up questions about symptoms and returns general guidance and possible next steps — clearly framed as informational, not a diagnosis.",
-    features: [
-      "Structured symptom intake conversation",
-      "Context-aware follow-up questioning",
-      "Clear non-diagnostic framing throughout",
-      "Session summary for a follow-up doctor visit",
-    ],
-    technologies: ["Python", "LangChain", "React", "PostgreSQL"],
-    github: "#",
-    demo: "#",
-  },
+  slug: "odyssey-college-fest",
+  name: "Odyssey College Fest Website",
+  type: "College Project",
+  tagline:
+    "A real-time college fest platform for event registration, participant management, and QR-based verification.",
+
+  cover: "odyssey",
+
+  problem:
+    "Managing college fest registrations and participant verification manually can be time-consuming and error-prone, especially when handling multiple events and large numbers of participants.",
+
+  solution:
+    "A centralized web platform for the Odyssey college fest that streamlined event registration and participant management using Firebase, with QR-code based verification to make on-site check-in faster and more reliable.",
+
+  features: [
+    "Online event registration and participant management",
+    "Firebase-based real-time data and authentication",
+    "QR-code based participant verification",
+    "Event-wise registration and check-in flow",
+    "Responsive college fest website",
+  ],
+
+  technologies: [
+    "React",
+    "Firebase",
+    "QR Scanner",
+    "HTML",
+    "CSS",
+    "JavaScript",
+  ],
+
+  github: "#",
+  demo: "https://odyssey-jce.com/",
+},
 ];

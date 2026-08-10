@@ -13,10 +13,15 @@ export const footerLinks = {
     { label: "Work", href: "/work" },
     { label: "Contact", href: "/contact" },
   ],
-  // TODO: replace "#" with real profile URLs once Deltivex's social accounts exist.
+
   social: [
-    { label: "GitHub", href: "#" },
-    { label: "LinkedIn", href: "#" },
-    { label: "X / Twitter", href: "#" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/137493911/",
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/deltivex_technologies/",
+    },
   ],
 };
